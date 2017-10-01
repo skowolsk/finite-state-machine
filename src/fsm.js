@@ -3,13 +3,18 @@ class FSM {
      * Creates new FSM instance.
      * @param config
      */
-    constructor(config) {}
+    constructor(config) {
+        this.config = config;
+        this.initial = initial;
+    }
 
     /**
      * Returns active state.
      * @returns {String}
      */
-    getState() {}
+    getState() {
+        return this.initial;
+    }
 
     /**
      * Goes to specified state.
@@ -26,7 +31,9 @@ class FSM {
     /**
      * Resets FSM state to initial.
      */
-    reset() {}
+    reset() {
+        this.initial = this.config.initial;
+    }
 
     /**
      * Returns an array of states for which there are specified event transition rules.
